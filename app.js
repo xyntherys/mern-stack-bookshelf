@@ -1,7 +1,11 @@
 const express = require('express');
+const connectDB = require('./config/db');
+
 const app = express();
 
-app.get('/', (req, res) => res.send('Hellos world!'));
+connectDB();
+
+app.get('/', (req, res) => res.send('diabolical!!'));
 
 const port = process.env.PORT || 8086;
 
